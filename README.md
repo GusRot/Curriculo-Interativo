@@ -4,4 +4,4 @@ Aqui você encontra diversas informações e certificados que podem ser vistos m
 
 I also have the curriculum in English, check it out
 
-https://gusrot.github.io/Curriculo-Interativo/
+[Acesse o site aqui](https://gusrot.github.io/Curriculo-Interativo/)
