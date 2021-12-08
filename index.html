@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         <title>Gustavo Currículo</title>
         <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
         <link rel="stylesheet" href="curriculo.css">
     </head>
 
@@ -23,7 +24,7 @@
             <button class="show-more-less section" onclick = "toggleMoreLess(this)">Ver menos -</button>
             <div class="line"></div>
             <div class="container">
-                <ul>
+                <ul class="pessoais">
                     <li class="linha">Data de Nascimento: 13/01/1997</li>
                     <li class="linha">Endereço: Caruaru – Pernambuco</li>
                     <li class="linha">E-mail: gustavo.rotta@hotmail.com</li>
@@ -43,11 +44,51 @@
             <h3>Objetivos</h3>
             <button class="show-more-less section" onclick = "toggleMoreLess(this)">Ver menos -</button>
             <div class="line"></div>
-            <ul>
+            <ul class="objetivos">
                 <li class="linha">Aprender e Ensinar.</li>
                 <li class="linha">Ampliar experiência profissional.</li>
                 <li class="linha">Crescer com a organização.</li>
             </ul>
+
+            <h3>Carta de Apresentação</h3>
+            <button class="show-more-less section" onclick = "toggleMoreLess(this)">Ver menos -</button>
+            <div class="line"></div>
+            <div>
+                <p class="apresentacao">A área de desenvolvimento sempre foi muito presente na minha rotina, porém o código em si, nunca havia sido prioridade até recentemente. Trabalhei em Fintechs e fui gestor de um time de desenvolvedores. Decidi migrar de cargo, pois acredito, que para se formar um bom líder em tecnologia, é essencial ter a base técnica muito forte e inspirar os liderados através do exemplo, portanto, hoje busco a transição de carreira para a área de front-end, já estudo individualmente há mais de 1 ano e tenho experiencia com projetos práticos e bootcamps que podem ser visualizadas através do meu <a href="https://github.com/GusRot" target="blank">github</a>. Todas as minhas aplicações possuem o build efetuado para você utilizar meus códigos como usuário. Tenho pretensão de aprender o Backend futuramente, em seu devido tempo, sem perder a qualidade no processo de aprendizagem. <br> 
+                Sempre trabalhei em equipe com as minhas experiências como consultor e tenho facilidade em comunicação e entendimento de regras de negócio. <br>
+                <strong>Conhecimentos Técnicos:</strong> 
+                </p>
+                <ul class="flex">
+                    <li>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <p>Javascript</p>
+                    </li> 
+                    <li>
+                        <i class="devicon-typescript-plain colored"></i>
+                        <p>Typescript</p>
+                    </li>
+                    <li>
+                        <i class="devicon-react-original colored"></i>
+                        <p>ReactJS</p>
+                    </li>
+                    <li>
+                        <i class="devicon-html5-plain colored"></i>
+                        <p>HTML</p>
+                    </li>
+                    <li>
+                        <i class="devicon-css3-plain colored"></i>
+                        <p>CSS</p>
+                    </li>
+                    <li>
+                        <i class="devicon-sass-original colored"></i>
+                        <p>SASS</p>
+                    </li>
+                    <li>
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <p>Bootstrap</p>
+                    </li>
+                </ul>
+            </div>
 
             <h3>Formação Profissional</h3>
             <button class="show-more-less section" onclick = "toggleMoreLess(this)">Ver menos -</button>
@@ -113,7 +154,7 @@
             <h3>Formação Academica</h3>
             <button class="show-more-less section" onclick = "toggleMoreLess(this)">Ver menos -</button>
             <div class="line"></div>
-            <ul>
+            <ul class="academica">
                 <li>
                     <strong><a class="institution-name" href="https://www.ufpe.br/agencia/noticias/-/asset_publisher/dlhi8nsrz4hK/content/ufpe-tem-11-cursos-com-conceito-maximo-no-enade-2019/40615" target="blank">
                     Universidade Federal de Pernambuco (UFPE)</a>
@@ -144,30 +185,42 @@
             <ul class="profissional">
                 <li>
                     <p><strong>Formação de um Consultor</strong> - Grupo Voitto – Fevereiro / 2019 </p>
-                    <p class="arrow-before"><em>Um passo a passo para a construção de um projeto de consultoria (Pré-projeto, Execução, Pós Projeto).  </em> 
-                    <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131998&authkey=AFH5L-I9dktlD98&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a></p>
+                    <button class="show-more-less" onclick = "toggleMoreLess(this)">Ver mais +</button>
+                    <div class="none">
+                        <p class="arrow-before"><em>Um passo a passo para a construção de um projeto de consultoria (Pré-projeto, Execução, Pós Projeto).  </em> 
+                        <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131998&authkey=AFH5L-I9dktlD98&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a></p>
+                    </div>
                 </li>
                 <li>
                     <p><strong>Formulação de um Planejamento Estratégico</strong> - Grupo Voitto – Janeiro / 2019 </p>
-                    <p class="arrow-before"><em>Ferramentas para auxiliar na criação de um planejamento estratégico. Identificar oportunidades e se antecipar a riscos empresariais. </em>  
-                    <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131676&authkey=ABapyVQR7KSZeKE&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a></p>
+                    <button class="show-more-less" onclick = "toggleMoreLess(this)">Ver mais +</button>
+                    <div class="none">
+                        <p class="arrow-before"><em>Ferramentas para auxiliar na criação de um planejamento estratégico. Identificar oportunidades e se antecipar a riscos empresariais. </em>  
+                        <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131676&authkey=ABapyVQR7KSZeKE&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a></p>
+                    </div>
                 </li>
                 <li>
                     <p><strong>Oratória e Técnicas de Apresentação</strong> - Grupo Voitto – Janeiro / 2019 </p>
-                    <p class="arrow-before"><em>Compreensão do público-alvo que se deseja comunicar, técnicas para uma melhor apresentação, respiração, postura, comunicação verbal e não-verbal. </em>  
-                    <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131655&authkey=AK-EUDAuamcOp-Y&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a></p>
+                    <button class="show-more-less" onclick = "toggleMoreLess(this)">Ver mais +</button>
+                    <div class="none">
+                        <p class="arrow-before"><em>Compreensão do público-alvo que se deseja comunicar, técnicas para uma melhor apresentação, respiração, postura, comunicação verbal e não-verbal. </em>  
+                        <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131655&authkey=AK-EUDAuamcOp-Y&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a></p>
+                    </div>  
                 </li>
                 <li>
-                    <strong>Formação Master em MS Excel</strong> - Grupo Voitto – Janeiro / 2019 <br>
-                    <p class="arrow-before"><em>Treinamento avançado com análise de grandes volumes de dados, tomadas de decisões precisas, automatização de cálculos, gráficos dinâmicos e gravação de macros. </em>  
-                    <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131664&authkey=APlDz0cqGvIK50Y&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a></p>
+                    <p><strong>Formação Master em MS Excel</strong> - Grupo Voitto – Janeiro / 2019 </p>
+                    <button class="show-more-less" onclick = "toggleMoreLess(this)">Ver mais +</button>
+                    <div class="none">
+                        <p class="arrow-before"><em>Treinamento avançado com análise de grandes volumes de dados, tomadas de decisões precisas, automatização de cálculos, gráficos dinâmicos e gravação de macros. </em>  
+                        <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131664&authkey=APlDz0cqGvIK50Y&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a></p>
+                    </div>
                 </li>
             </ul>
 
             <h3>Informações Complementares</h3>
             <button class="show-more-less section" onclick = "toggleMoreLess(this)">Ver menos -</button>
             <div class="line" style="margin-bottom: 0;"></div>
-            <ul>
+            <ul class="complementar">
                 <li class="linha margin-t">Trabalho em equipe, proativo, resiliente, dinâmico.</li>
                 <li class="linha">Inglês <strong>Avançado</strong>.   
                     <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131475&authkey=AOS_DPwXsIyfWxc&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a>
@@ -178,7 +231,8 @@
                 <li class="linha">Alemão <strong>Básico</strong>.   
                     <a class="links" href="https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2167729&authkey=AHHfVIbgCHTMRNg&em=2" width="476" height="288" frameborder="0" scrolling="no" target="blank">*Certificado</a>
                 </li>
-                <br><br><p class="linha">Acesse também meu <strong><a  class="institution-name" href="https://gusrot.github.io/Portfolio/" target="blank">portifólio de desenvolvimento</a></strong></p>
+                <br><br>
+                <p class="linha sublinhado">Acesse também meu <strong><a  class="institution-name" href="https://gusrot.github.io/Portfolio/" target="blank">portifólio de desenvolvimento</a></strong></p>
             </ul>
 
         </main>

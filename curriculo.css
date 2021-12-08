@@ -1,3 +1,7 @@
+* {
+    font-size: 14px;
+}
+
 body {
     max-width: 750px;
     margin: 0px auto;
@@ -28,7 +32,7 @@ h1 {
 }
 
 button {
-    width: 50px;
+    width: 55px;
     background-color: #ebdbcc80;
     border: 1px solid dimgray;
     border-radius: 5px;
@@ -38,6 +42,7 @@ button {
 .button-active {
     opacity: 1;
     pointer-events: none;
+    font-weight: 600;
 }
 
 button:hover {
@@ -51,10 +56,28 @@ h3 {
     font-size: 20px;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.flex li {
+    text-align: center;
+}
+
+.flex p {
+    text-align: center;
+}
+
+.flex i {
+    font-size: 30px;
+}
+
 .container {
     display: flex;
     align-items: center;
-    justify-content:baseline
+    justify-content: baseline;
 }
 
 .img-pessoal {
@@ -66,14 +89,34 @@ h3 {
 
 ul li {
     margin: 2px 0;
+    font-size: 16px;
+}
+
+.apresentacao {
+    font-size: 16px;
+    text-justify: distribute;
+    text-align: justify;
+    line-height: 19px;
+    margin-bottom: 10px;
+    text-indent: 45px;
+}
+
+.apresentacao a {
+    color: steelblue;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 ul li:last-child {
     margin: 0px 0;
 }
 
-ul li:before {
-   content: "➣ ";
+.profissional li:before,
+.academica li:before,
+.complementar li:before,
+.objetivos li:before,
+.pessoais li:before {
+    content: "➣ ";
 }
 
 .linha p {
@@ -104,7 +147,7 @@ ul li:before {
 }
 
 body h3 {
-    color: steelblue;   
+    color: steelblue;
     display: inline;
     margin-right: 20px;
 }
@@ -119,7 +162,7 @@ body h3 {
 }
 
 .arrow-before:before {
-    content:"» ";
+    content: "» ";
 }
 
 .show-more-less {
@@ -132,7 +175,7 @@ body h3 {
 
 .section {
     vertical-align: bottom;
-    background-color: rgb( 70, 130, 180, 0.2);
+    background-color: rgb(70, 130, 180, 0.2);
     border: 1px solid dimgrey;
     color: steelblue;
     opacity: 0.8;
@@ -156,12 +199,12 @@ li p {
     vertical-align: bottom;
     margin: 0px;
     padding-left: 2px;
-    }
+}
 
 .links:hover {
     color: rgb(49, 88, 119);
     font-size: 80%;
-    }
+}
 
 .institution-name {
     text-decoration: none;
@@ -170,12 +213,12 @@ li p {
 
 .institution-name:hover {
     color: rgb(49, 88, 119);
-} 
+}
 
 footer {
     padding: 40px 5%;
     text-align: right;
-    background-color: #ebdbcc80;;
+    background-color: #ebdbcc80;
 }
 
 strong {
@@ -195,9 +238,20 @@ em strong {
     display: none;
 }
 
-@media(max-width: 740px) {
+.sublinhado {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(70, 130, 180, 0.8);
+}
+
+.sublinhado a {
+    color: rgba(70, 130, 180, 1);
+}
+
+@media (max-width: 740px) {
     body {
-        width: 100%;    
+        width: 100%;
         max-width: 100%;
         margin: 0px;
     }
@@ -216,10 +270,10 @@ em strong {
     }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .container {
         flex-direction: column;
-        justify-content: start ;
+        justify-content: start;
         align-items: baseline;
     }
 
