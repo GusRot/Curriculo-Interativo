@@ -18,10 +18,8 @@ function toggleMoreLess(moreLess) {
     }
 }
 
-
 const personal = [
     "Data de Nascimento: 13/01/1997",
-    "Endereço: Caruaru – Pernambuco",
     "E-mail: gustavo.rotta@hotmail.com",
 ];
 
@@ -80,19 +78,7 @@ const languages = [
     },
 ];
 
-const professional = [
-    {
-        title: "Gerente de Projetos Softmakers",
-        period: "Maio / 2021 - Outubro / 2021",
-        ativities: {
-            ativitie:
-                "Gerenciamento de entregas incrementais da equipe de desenvolvimento por meio da utilização do framework Scrum, no qual o trabalho é dividido em iterações (Sprints) direcionados por uma meta a cada ciclo.",
-            objectives:
-                "Levar a transformação digital para as empresas de acordo com a necessidade de cada negócio.",
-            improve:
-                "Gerenciamento de pessoas e recursos. Gestão de conflitos.",
-        },
-    },
+const professionalComplementary = [
     {
         title: "Consultor Financeiro Autônomo",
         period: "Agosto / 2020 – Junho / 2021",
@@ -143,6 +129,33 @@ const professional = [
     },
 ];
 
+const professional = [
+    {
+        title: "Desenvolvedor Web React",
+        period: "Fevereiro / 2021 – Atualmente",
+        ativities: {
+            ativitie:
+                "Desenvolvimento de aplicações front-end em projetos pessoais, manutenção e implementação de novas funcionalidades. Mais de 20 projetos realizados e quase 300 commits que podem ser visualizados no Github: https://github.com/GusRot",
+            objectives:
+                "Desenvolver a melhor experiencia do usuário através de linhas de códigos.",
+            improve:
+                "Javascript/ Typescript / ReactJS /HTML / CSS/ SASS / Bootstrap.",
+        },
+    },
+    {
+        title: "Gerente de Projetos Softmakers",
+        period: "Maio / 2021 - Outubro / 2021",
+        ativities: {
+            ativitie:
+                "Gerenciamento de entregas incrementais da equipe de desenvolvimento por meio da utilização do framework Scrum, no qual o trabalho é dividido em iterações (Sprints) direcionados por uma meta a cada ciclo.",
+            objectives:
+                "Levar a transformação digital para as empresas de acordo com a necessidade de cada negócio.",
+            improve:
+                "Gerenciamento de pessoas e recursos. Gestão de conflitos.",
+        },
+    },
+];
+
 const courses = [
     {
         name: "Front-End Developer ReactJS",
@@ -171,6 +184,42 @@ const courses = [
         description:
             "Treinamento avançado com análise de grandes volumes de dados, tomadas de decisões precisas, automatização de cálculos, gráficos dinâmicos e gravação de macros.",
         link: "https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%2131664&authkey=APlDz0cqGvIK50Y&em=2",
+    },
+];
+
+const someProjects = [
+    {
+        title: "Projeto dt-money",
+        period: "Desenvolvimento React, foram utilizados:",
+        ativities: [
+            "Function Components como padrão.",
+            "Typescript para um maior controle das variáveis na aplicação.",
+            "Context para controlar as transações com variáveis globais.",
+            "Requisições de uma API de Transações do Usuário com a biblioteca Axios.",
+            "API Simulada com biblioteca MirageJS.",
+            "Utilização do Storage para salvar os dados salvos pelo usuário. ",
+            `Deploy com Vercel: <a class="links" href="https://dt-money-one.vercel.app" target="blank">Build Link</a> Repositório: <a class="links" href="https://github.com/GusRot/DTMoney" target="blank">Link Repo</a>`,
+        ],
+    },
+    {
+        title: "Projeto e-commerce",
+        period: "Desenvolvimento React, foram utilizados",
+        ativities: [
+            "Class Components como padrão.",
+            "REDUX para controlar produtos no carrinho com variáveis globais.",
+            "Requisições com o client Apollo de um endpoint desenvolvido em GRAPHQL.",
+            "Styled componentes para manusear estados por props, como o dark-mode.",
+            "Utilização do REDUX-Persist para salvar os dados salvos pelo usuário. ",
+            "React-router-dom para manusear as diferentes rotas(PLP, PDP, CartPage). ",
+            `Deploy com Vercel (<a class="links" href="https://github.com/GusRot/e-commerce" target="blank">ler instruções no repositório</a>):`,
+        ],
+    },
+    {
+        title: "Projeto portifólio ",
+        period: "Desenvolvimento React - Todos os meus projetos em um link. ",
+        ativities: [
+            `Para visualizar o build do projeto. <a class="links" href="https://portifolio-gusrot.vercel.app" target="blank">[Acesse link aqui]</a> `,
+        ],
     },
 ];
 
@@ -212,10 +261,10 @@ window.onload = function () {
     </li>`;
     }
 
-    const objectivesID = document.getElementById("objectives");
-    for (let i = 0; i < objectives.length; i++) {
-        objectivesID.innerHTML += `<li class="linha">${objectives[i]}</li>`;
-    }
+    // const objectivesID = document.getElementById("objectives");
+    // for (let i = 0; i < objectives.length; i++) {
+    //     objectivesID.innerHTML += `<li class="linha">${objectives[i]}</li>`;
+    // }
 
     const languagesID = document.getElementById("languages");
     for (let i = 0; i < languages.length; i++) {
@@ -237,7 +286,7 @@ window.onload = function () {
                 <strong>Aprendizados:</strong> ${professional[i].ativities.improve}
             </em></p>
         </div>
-    </li> `;
+    </li> <br>`;
     }
 
     const coursesID = document.getElementById("courses");
@@ -262,3 +311,39 @@ window.onload = function () {
     </li>`;
     }
 };
+
+const professionalCompID = document.getElementById("professionalComplementary");
+for (let i = 0; i < professionalComplementary.length; i++) {
+    professionalCompID.innerHTML += `<li>
+        <p><strong>${professionalComplementary[i].title}</strong>: ${professionalComplementary[i].period} </p>
+        <button class="show-more-less" onclick = "toggleMoreLess(this)">Ver menos -</button>
+        <div>
+            <p class="arrow-before"><em>
+                <strong>Atividades:</strong>${professionalComplementary[i].ativities.ativitie}<br>
+                <strong>Objetivos:</strong> ${professionalComplementary[i].ativities.objectives}<br>
+                <strong>Aprendizados:</strong> ${professionalComplementary[i].ativities.improve}
+            </em></p>
+        </div>
+    </li>         <br>
+    `;
+}
+
+const projectsReact = document.getElementById("projectsReact");
+for (let i = 0; i < someProjects.length; i++) {
+    projectsReact.innerHTML += `<li>
+        <p><strong>${someProjects[i].title}</strong>: ${someProjects[i].period} </p>
+        <button class="show-more-less" onclick = "toggleMoreLess(this)">Ver menos -</button>
+        <div id="activityProject${i}">
+        </div>
+        <br>
+    </li> `;
+
+    const activityProject = document.getElementById(`activityProject${i}`);
+    for (let j = 0; j < someProjects[i].ativities.length; j++) {
+        activityProject.innerHTML += `
+            <p class="arrow-before">
+                <em>${someProjects[i].ativities[j]}</em>
+            </p>
+        `;
+    }
+}
