@@ -79,23 +79,12 @@ const languages = [
     },
 ];
 
-const professional = [
-    {
-        title: "Project Manager Softmakers",
-        period: " May / 2021 – October / 2021",
-        ativities: {
-            ativitie:
-                "Management of incremental deliveries of development team through the Scrum framework, divided into Sprints driven by a goal in each cycle.",
-            objectives:
-                "Bring digital transformation to companies according to the needs of each business.",
-            improve: "People and resources management and conflict management.",
-        },
-    },
+const professionalComplementary = [
     {
         title: "Financial Consultant freelance",
-        period: "Agosto / 2020 – Junho / 2021",
-        ativities: {
-            ativitie:
+        period: "August / 2020 – June / 2021",
+        activities: {
+            activity:
                 "Responsible for analyzing and evaluating the financial life of customers using the best financial product options that the Brazilian market offers according to each profile.",
             objectives:
                 "Develop the best strategy for customers to achieve their goals.",
@@ -106,8 +95,8 @@ const professional = [
     {
         title: "Commercial Consultant STONE ",
         period: "January / 2020 – August / 2020",
-        ativities: {
-            ativitie:
+        activities: {
+            activity:
                 "Prospecting and attracting customers; portfolio analyses; Management of the sales funnel and churn prevention.",
             objectives:
                 "Increase clients base, help customers improve their business by increasing their sales, and increasing their NPS.",
@@ -118,8 +107,8 @@ const professional = [
     {
         title: "PCP Intern VITAMASSA(Industry)",
         period: "July / 2019 – December / 2019",
-        ativities: {
-            ativitie:
+        activities: {
+            activity:
                 "Responsible for production planning and control activities; Use of ERP Protheus in resupply process; Framework Kaizen.",
             objectives:
                 "Ensure resources and supplies at the right time at the right place, in addition to an improvement project with the application of Six Sigma methodology in the Supply process. ",
@@ -130,14 +119,74 @@ const professional = [
     {
         title: "Manager Ciclo Consultoria - Junior Company",
         period: "December / 2017 – December / 2018",
-        ativities: {
-            ativitie:
+        activities: {
+            activity:
                 "Negotiation and Sale of Services; Planning and Preparation of Commercial Proposals; Company Event Representative; Project Planning and Control.",
             objectives:
                 "Enhance practical knowledge of the student community, in addition to the theoretical knowledge of the university. ",
             improve:
                 "Dealing with all aspects of a real company, the attitude to solve problems in any scope and understanding of its impacts to the organization.",
         },
+    },
+];
+
+const professional = [
+    {
+        title: "Developer Web React",
+        period: "February / 2021 – current",
+        activities: {
+            activity:
+                "Development of front-end applications in personal projects, maintenance, and implementation of new features. More than 20 completed projects and more than 300 commits that can be viewed on Github: https://github.com/GusRot",
+            objectives:
+                "Develop the best user experience through lines of code.",
+            improve:
+                "Javascript/ Typescript / ReactJS /HTML / CSS/ SASS / Bootstrap.",
+        },
+    },
+    {
+        title: "Project Manager Softmakers",
+        period: " May / 2021 – October / 2021",
+        activities: {
+            activity:
+                "Management of incremental deliveries of development team through the Scrum framework, divided into Sprints driven by a goal in each cycle.",
+            objectives:
+                "Bring digital transformation to companies according to the needs of each business.",
+            improve: "People and resources management and conflict management.",
+        },
+    },
+];
+
+const someProjects = [
+    {
+        title: "Project dt-money",
+        period: "React Development",
+        activities: [
+            "Function Components as standard.",
+            "Typescript for greater control over variables in the application.",
+            "Context to control transactions with global variables.",
+            "Requests from UserTransaction API with the Axios library.",
+            "Use of Storage to save data saved by the user.",
+            `Deploy with Vercel: <a class="links" href="https://dt-money-one.vercel.app" target="blank">Build Link</a> Repository: <a class="links" href="https://github.com/GusRot/DTMoney" target="blank">Link Repo</a>`,
+        ],
+    },
+    {
+        title: "Project e-commerce",
+        period: "React Development",
+        activities: [
+            "Class Components as standard.",
+            "REDUX to control products in cart with global variables.",
+            "Requests with the Apollo client from an endpoint developed in GRAPHQL.",
+            "Styled components to handle states by props, like dark-mode.",
+            "React-router-dom to handle routes(PLP, PDP, CartPage).",
+            `Deploy with Vercel (<a class="links" href="https://github.com/GusRot/e-commerce" target="blank">ler instructions on repository</a>):`,
+        ],
+    },
+    {
+        title: "Project portfolio ",
+        period: "React Development - All of my projects in one link. ",
+        activities: [
+            `to visualize build of project. <a class="links" href="https://portifolio-gusrot.vercel.app" target="blank">[Access link here]</a> `,
+        ],
     },
 ];
 
@@ -210,10 +259,10 @@ window.onload = function () {
     </li>`;
     }
 
-    const objectivesID = document.getElementById("objectives");
-    for (let i = 0; i < objectives.length; i++) {
-        objectivesID.innerHTML += `<li class="linha">${objectives[i]}</li>`;
-    }
+    // const objectivesID = document.getElementById("objectives");
+    // for (let i = 0; i < objectives.length; i++) {
+    //     objectivesID.innerHTML += `<li class="linha">${objectives[i]}</li>`;
+    // }
 
     const languagesID = document.getElementById("languages");
     for (let i = 0; i < languages.length; i++) {
@@ -230,12 +279,12 @@ window.onload = function () {
         <button class="show-more-less" onclick = "toggleMoreLess(this)">Ver menos -</button>
         <div>
             <p class="arrow-before"><em>
-                <strong>Atividades:</strong>${professional[i].ativities.ativitie}<br>
-                <strong>Objetivos:</strong> ${professional[i].ativities.objectives}<br>
-                <strong>Aprendizados:</strong> ${professional[i].ativities.improve}
+                <strong>activities:</strong>${professional[i].activities.activity}<br>
+                <strong>Objective:</strong> ${professional[i].activities.objectives}<br>
+                <strong>Improved:</strong> ${professional[i].activities.improve}
             </em></p>
         </div>
-    </li> `;
+    </li> <br>`;
     }
 
     const coursesID = document.getElementById("courses");
@@ -260,3 +309,39 @@ window.onload = function () {
     </li>`;
     }
 };
+
+const professionalCompID = document.getElementById("professionalComplementary");
+for (let i = 0; i < professionalComplementary.length; i++) {
+    professionalCompID.innerHTML += `<li>
+        <p><strong>${professionalComplementary[i].title}</strong>: ${professionalComplementary[i].period} </p>
+        <button class="show-more-less" onclick = "toggleMoreLess(this)">Ver menos -</button>
+        <div>
+            <p class="arrow-before"><em>
+                <strong>activities:</strong>${professionalComplementary[i].activities.activity}<br>
+                <strong>Objective:</strong> ${professionalComplementary[i].activities.objectives}<br>
+                <strong>Improved:</strong> ${professionalComplementary[i].activities.improve}
+            </em></p>
+        </div>
+    </li>         <br>
+    `;
+}
+
+const projectsReact = document.getElementById("projectsReact");
+for (let i = 0; i < someProjects.length; i++) {
+    projectsReact.innerHTML += `<li>
+        <p><strong>${someProjects[i].title}</strong>: ${someProjects[i].period} </p>
+        <button class="show-more-less" onclick = "toggleMoreLess(this)">Ver menos -</button>
+        <div id="activityProject${i}">
+        </div>
+        <br>
+    </li> `;
+
+    const activityProject = document.getElementById(`activityProject${i}`);
+    for (let j = 0; j < someProjects[i].activities.length; j++) {
+        activityProject.innerHTML += `
+            <p class="arrow-before">
+                <em>${someProjects[i].activities[j]}</em>
+            </p>
+        `;
+    }
+}
