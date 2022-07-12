@@ -37,7 +37,7 @@ const personalLinks = [
     {
         name: "https://github.com/GusRot",
         href: "https://github.com/GusRot",
-        link: "https://bn02pap001files.storage.live.com/y4mfz4ITgsi8lZ7AASAiUrvXV9eICS12npEla7O_fCb5FHO_PBxRwd6ViK-VfbyFKkuBJCb0Qkop84TK_ddzqUrsSr5MdtnrPVhmGgaJHnldJuXaAsAVpOnZMVwgnFNm9FiHKGlf6naxr7EWT18fQ_WqVY-R6MYsW67CWtNLgoDCdl44-qP4CR068n_NjrCvdYE?width=450&height=428&cropmode=none",
+        src: "https://bn02pap001files.storage.live.com/y4mfz4ITgsi8lZ7AASAiUrvXV9eICS12npEla7O_fCb5FHO_PBxRwd6ViK-VfbyFKkuBJCb0Qkop84TK_ddzqUrsSr5MdtnrPVhmGgaJHnldJuXaAsAVpOnZMVwgnFNm9FiHKGlf6naxr7EWT18fQ_WqVY-R6MYsW67CWtNLgoDCdl44-qP4CR068n_NjrCvdYE?width=256&height=243&cropmode=none",
     },
 ];
 
@@ -131,8 +131,19 @@ const professionalComplementary = [
 
 const professional = [
     {
+        title: "Adobe Commerce Developer - Webjump",
+        period: "Março / 2022 – atualmente",
+        ativities: {
+            ativitie:
+                "Empresa especializada em Adobe Commerce, em que atuo no desenvolvimento Magento. No meu dia a dia utilizo a estrutura MVC em um ambiente docker com versionamento no Bitbucket. Atualmente trabalhando com B2B",
+            objectives: "Desenvolver rápidas e eficientes storefronts",
+            improve:
+                "JS, KO, JQuery, LESS, XML, PHP, AJAX, Git, JIRA, LINUX, grunt",
+        },
+    },
+    {
         title: "Desenvolvedor Web React",
-        period: "Fevereiro / 2021 – Atualmente",
+        period: "Janeiro / 2021 – Atualmente",
         ativities: {
             ativitie:
                 "Desenvolvimento de aplicações front-end em projetos pessoais, manutenção e implementação de novas funcionalidades. Mais de 20 projetos realizados e quase 300 commits que podem ser visualizados no Github: https://github.com/GusRot",
@@ -142,27 +153,22 @@ const professional = [
                 "Javascript/ Typescript / ReactJS /HTML / CSS/ SASS / Bootstrap.",
         },
     },
-    {
-        title: "Gerente de Projetos Softmakers",
-        period: "Maio / 2021 - Outubro / 2021",
-        ativities: {
-            ativitie:
-                "Gerenciamento de entregas incrementais da equipe de desenvolvimento por meio da utilização do framework Scrum, no qual o trabalho é dividido em iterações (Sprints) direcionados por uma meta a cada ciclo.",
-            objectives:
-                "Levar a transformação digital para as empresas de acordo com a necessidade de cada negócio.",
-            improve:
-                "Gerenciamento de pessoas e recursos. Gestão de conflitos.",
-        },
-    },
 ];
 
 const courses = [
     {
         name: "Front-End Developer ReactJS",
-        institution: "Alura – Dezembro / 2021",
+        institution: "Alura – 2022",
         description:
             "Desenvolver uma aplicação completa utilizando as tecnologias citadas acima.",
-        link: "https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%21156023&authkey=ACTcfT5ENlpL_I4&em=2",
+        link: "https://1drv.ms/b/s!AvtEm98X2cVanfpDQeb6PJ1471Aj8g?e=2RA5Jj",
+    },
+    {
+        name: "Magento Front-end",
+        institution: "M.Academy – 2022",
+        description:
+            "Desenvolver aplicações Adobe-Commerce usando: UiComponents / JS / KO / AJAX",
+        link: "https://1drv.ms/u/s!AvtEm98X2cVanf4iRjndKa8BSn9b2w?e=TO6jQz",
     },
     {
         name: "Formulação de um Planejamento Estratégico",
@@ -188,6 +194,25 @@ const courses = [
 ];
 
 const someProjects = [
+    {
+        title: "Adobe Commerce – Front-end Development",
+        period: "Desenvolvimento Magento",
+        ativities: [
+            "HTML, CSS, JS, XML. (básico PHP).",
+            "Less pre-processadores, padrões de arquiteturas CSS, Criação de Mixins, UI responsivo.",
+            "Biblioteca JQuery, JQuery Widgets, Requisições Ajax, funções assíncronas.",
+            "Soluções em UiComponents e Knockout(ko).",
+            "SEO, accessibilidade, e performance em ambiente de produção.",
+            "Desenvolvimento de blocos CMS e components page builder. ",
+            "Contribuição para reuniões diárias, planejamento de sprints e estimativas.",
+            "Git versionamento e code reviews.",
+            `Meus repositórios pessoais: 
+            <a class="links" href="https://github.com/GusRot/Magento-Quick-Learn" target="blank">Repo1 </a>
+            <a class="links" href="https://github.com/GusRot/Magento-Theme" target="blank">Repo2 </a>
+            <a class="links" href="https://github.com/GusRot/Magento-Styles" target="blank">Repo3</a>
+            `,
+        ],
+    },
     {
         title: "Projeto dt-money",
         period: "Desenvolvimento React, foram utilizados:",
@@ -257,7 +282,7 @@ window.onload = function () {
     }
     for (let i = 0; i < personalLinks.length; i++) {
         personalId.innerHTML += `<li class="linha">${personalLinks[i].name} 
-        <p><a href=${personalLinks[i].href} src=${personalLinks[i].src}></a></p>
+        <p><a href=${personalLinks[i].href}} target="blank"><img class="logo" src=${personalLinks[i].src}></img></a></p>
     </li>`;
     }
 

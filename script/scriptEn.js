@@ -38,7 +38,7 @@ const personalLinks = [
     {
         name: "https://github.com/GusRot",
         href: "https://github.com/GusRot",
-        link: "https://bn02pap001files.storage.live.com/y4mfz4ITgsi8lZ7AASAiUrvXV9eICS12npEla7O_fCb5FHO_PBxRwd6ViK-VfbyFKkuBJCb0Qkop84TK_ddzqUrsSr5MdtnrPVhmGgaJHnldJuXaAsAVpOnZMVwgnFNm9FiHKGlf6naxr7EWT18fQ_WqVY-R6MYsW67CWtNLgoDCdl44-qP4CR068n_NjrCvdYE?width=450&height=428&cropmode=none",
+        src: "https://bn02pap001files.storage.live.com/y4mfz4ITgsi8lZ7AASAiUrvXV9eICS12npEla7O_fCb5FHO_PBxRwd6ViK-VfbyFKkuBJCb0Qkop84TK_ddzqUrsSr5MdtnrPVhmGgaJHnldJuXaAsAVpOnZMVwgnFNm9FiHKGlf6naxr7EWT18fQ_WqVY-R6MYsW67CWtNLgoDCdl44-qP4CR068n_NjrCvdYE?width=450&height=428&cropmode=none",
     },
 ];
 
@@ -118,7 +118,7 @@ const professionalComplementary = [
     },
     {
         title: "Manager Ciclo Consultoria - Junior Company",
-        period: "December / 2017 – December / 2018",
+        period: "Dec / 2017 – Dec / 2018",
         activities: {
             activity:
                 "Negotiation and Sale of Services; Planning and Preparation of Commercial Proposals; Company Event Representative; Project Planning and Control.",
@@ -132,6 +132,17 @@ const professionalComplementary = [
 
 const professional = [
     {
+        title: "Adobe Commerce Developer - Webjump",
+        period: "March / 2022 – current",
+        activities: {
+            activity:
+                "Company specialized in Adobe Commerce, where I work with Magento. I use the MVC framework in a docker environment with versioning on Bitbucket. Currently working with B2B",
+            objectives: "Develop fast and flexible storefronts",
+            improve:
+                "JS, KO, JQuery, LESS, XML, PHP, AJAX, Git, JIRA, LINUX, grunt",
+        },
+    },
+    {
         title: "Developer Web React",
         period: "February / 2021 – current",
         activities: {
@@ -143,20 +154,28 @@ const professional = [
                 "Javascript/ Typescript / ReactJS /HTML / CSS/ SASS / Bootstrap.",
         },
     },
-    {
-        title: "Project Manager Softmakers",
-        period: " May / 2021 – October / 2021",
-        activities: {
-            activity:
-                "Management of incremental deliveries of development team through the Scrum framework, divided into Sprints driven by a goal in each cycle.",
-            objectives:
-                "Bring digital transformation to companies according to the needs of each business.",
-            improve: "People and resources management and conflict management.",
-        },
-    },
 ];
 
 const someProjects = [
+    {
+        title: "Adobe Commerce – Front-end Development",
+        period: "Desenvolvimento Magento",
+        activities: [
+            "HTML, CSS, JS, XML. (basic PHP).",
+            "Less pre-processor, CSS architecture patterns, Mixin modeling, UI responsive.",
+            "JQuery library, JQuery Widgets, Ajax requisitions, asynchronous functions.",
+            "UiComponents and Knockout(ko) solutions.",
+            "SEO, accessibility, and performance in production environment.",
+            "Development of CMS blocks and page builder components.",
+            "Contributing to daily meetings, sprint planning and estimations.",
+            "Git versioning and code reviews.",
+            `Meus repositórios pessoais: 
+            <a class="links" href="https://github.com/GusRot/Magento-Quick-Learn" target="blank">Repo1 </a>
+            <a class="links" href="https://github.com/GusRot/Magento-Theme" target="blank">Repo2 </a>
+            <a class="links" href="https://github.com/GusRot/Magento-Styles" target="blank">Repo3</a>
+            `,
+        ],
+    },
     {
         title: "Project dt-money",
         period: "React Development",
@@ -196,7 +215,14 @@ const courses = [
         institution: "Alura – December / 2021",
         description:
             "Develop a front-end application with the technologies listed in the certificate",
-        link: "https://onedrive.live.com/embed?cid=5AC5D917DF9B44FB&resid=5AC5D917DF9B44FB%21156023&authkey=ACTcfT5ENlpL_I4&em=2",
+        link: "https://1drv.ms/b/s!AvtEm98X2cVanfpDQeb6PJ1471Aj8g?e=2RA5Jj",
+    },
+    {
+        name: "Magento Front-end",
+        institution: "M.Academy – 2022",
+        description:
+            "Develop Adobe-Commerce applications using: UiComponents / JS / KO / AJAX",
+        link: "https://1drv.ms/u/s!AvtEm98X2cVanf4iRjndKa8BSn9b2w?e=TO6jQz",
     },
     {
         name: "Formulation of a Strategic Plan",
@@ -255,7 +281,7 @@ window.onload = function () {
     }
     for (let i = 0; i < personalLinks.length; i++) {
         personalId.innerHTML += `<li class="linha">${personalLinks[i].name} 
-        <p><a href=${personalLinks[i].href} src=${personalLinks[i].src}></a></p>
+        <p><a href=${personalLinks[i].href} target="blank"><img class="logo" src=${personalLinks[i].src}></img></a></p>
     </li>`;
     }
 
